@@ -224,7 +224,57 @@ public class Main {
 
         /// //the code////
 
+//
+//        int weak =0;
+//        int days =0;
+//
+//        for (int i = 1; i <= 4 ; i++) {
+//// the first loop to print the weaks from 1 to 4
+//            System.out.println("Weak number : " +i);
+//            // the second loop is nested, and it prints the days from 1 to 7
+//            for (int j = 1; j <=7 ; j++) {
+//                System.out.println("Day : " +j);
+//            }
+//        }
+//
+//
 
+        /// //////////////////////////// ////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//        8.Write a program that's check if the word is a palindrome or not. hint: A
+//        string is said to be a palindrome if it is the same if we start reading it from
+//        left to right or right to left.
+
+
+        /// //the code////
+        System.out.println("Please enter word to check if palindrome or not  : ");
+String Pword = input.nextLine();
+
+        char[]  palindrome_array = Pword.toCharArray();// I created an array type char from the word the user entered . the array contains all the characters in the string
+        String palindrome_word;// string to store the reversed word
+        boolean result =true;// a flag to make the print outside the loop
+
+
+      for (int i = palindrome_array.length - 1; i >= 0; i--) {
+           /*  we defined a counter called i , and assigned it to the array.length -1  to store the full length according to the last index
+           for example if the actual length was 6 then the method length stores from 0 to 5  .   because its start from index 0
+            */
+          // the conter (i) will decrement from the last index in the text to the fist to reverse it
+          // I printed the array of char
+
+          palindrome_word = (String.valueOf(palindrome_array[i]));
+// after reversing the word  I stored the revered word in  palindrome_word
+          // if
+          if (palindrome_word.equalsIgnoreCase(Pword)) result = true; // if the reversed word equals the original word the flag will be true else it will be false
+          else result = false;
+
+      }
+// outside the loop i printed the result using the flag
+          if (result = true) {
+              System.out.println("The word :  " + Pword + "\n " + " is palindrome word ");
+
+          }   else System.out.println("The word : + " + Pword + "\n " + " is palindrome NOT  word ");
 
 
 
@@ -234,6 +284,12 @@ public class Main {
 
 
 }
+
+
+
+
+
+
 
 
 
