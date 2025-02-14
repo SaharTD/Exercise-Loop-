@@ -57,24 +57,20 @@ public class Main {
 //        string: xof nworb kciuq ehT
 
 
-
         /// //the code////
+          /// /// defined a char to print the reversed string . then used the for loop to iterate on the size of the String
+        // the counter incrementing to start from the end
+        
+       System.out.print("Please enter a text to reverse it : ");
+       String txt = input.nextLine();
 
-//        System.out.print("Please enter a text to reverse it : ");
-//        String txt = input.nextLine();
-//
-//        char[] array = txt.toCharArray();
-// I created an array type char from the text the user entered . the array contains all the characters in the string
+       char reversed_word;
+        for (int i = txt.length() - 1; i >= 0; i--) {
 
-//        for (int i = array.length - 1; i >= 0; i--) {
-           /*  we defined a counter called i , and assigned it to the array.length -1  to store the full length according to the last index
-           for example if the actual length was 6 then the method length stores from 0 to 5  .   because its start from index 0
-            */
-            // the conter (i) will decrement from the last index in the text to the fist to reverse it
-//            System.out.print(array[i]);
-            // I printed the array of char
-        //}
-
+        reversed_word = txt.charAt(i);
+           System.out.print(""+reversed_word);
+        }
+  
 
         /// //////////////////////////// ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -247,38 +243,29 @@ public class Main {
 //        left to right or right to left.
 
 
-        /// //the code////
+    /// /// I`m going to reverse the word first then compare the reversed word with the original word
+
         System.out.println("Please enter word to check if palindrome or not  : ");
-String Pword = input.nextLine();
+        String Pword = input.nextLine();
 
-        char[]  palindrome_array = Pword.toCharArray();// I created an array type char from the word the user entered . the array contains all the characters in the string
-        String palindrome_word;// string to store the reversed word
-        boolean result =true;// a flag to make the print outside the loop
+        char reversed_word = 0;
+        String palindrome_word = "";
+
+        for (int i = Pword.length() - 1; i >= 0; i--) {
+
+            reversed_word = Pword.charAt(i);//saved each char in the reversed word
+            palindrome_word += String.valueOf(reversed_word); // added the char as string and stored in the variable palindrome_word
+        }
 
 
-      for (int i = palindrome_array.length - 1; i >= 0; i--) {
-           /*  we defined a counter called i , and assigned it to the array.length -1  to store the full length according to the last index
-           for example if the actual length was 6 then the method length stores from 0 to 5  .   because its start from index 0
-            */
-          // the conter (i) will decrement from the last index in the text to the fist to reverse it
-          // I printed the array of char
-
-          palindrome_word = (String.valueOf(palindrome_array[i]));
-// after reversing the word  I stored the revered word in  palindrome_word
-          // if
-          if (palindrome_word.equalsIgnoreCase(Pword)) result = true; // if the reversed word equals the original word the flag will be true else it will be false
-          else result = false;
-
-      }
-// outside the loop i printed the result using the flag
-          if (result = true) {
-              System.out.println("The word :  " + Pword + "\n " + " is palindrome word ");
-
-          }   else System.out.println("The word : + " + Pword + "\n " + " is palindrome NOT  word ");
-
+        // string to store the reversed word
+        if (palindrome_word.equalsIgnoreCase(Pword)) { // if the reversed word equals the original word the flag will be true else it will be false
+            System.out.println("The word :  " + Pword + "\n " + "is palindrome word ");
+        } else System.out.println("The word :  " + Pword + "\n " + "is palindrome NOT  word ");
 
 
     }
+    
 
 
 
